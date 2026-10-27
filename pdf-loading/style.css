@@ -1,0 +1,18 @@
+.pdf-loading-page {
+  animation: pdf-loading-paging 0.7s linear infinite;
+  transform-origin: left;
+}
+
+@keyframes pdf-loading-paging {
+  0% {
+    transform: rotateY(0deg) skewY(0deg);
+  }
+
+  50% {
+    transform: rotateY(90deg) skewY(-20deg);
+  }
+
+  100% {
+    transform: rotateY(180deg) skewY(0deg);
+  }
+}

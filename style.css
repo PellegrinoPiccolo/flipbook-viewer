@@ -1,0 +1,15 @@
+:where(.flipbook-viewer) {
+  --flipbook-ink: #272723;
+  --flipbook-accent: #ee7e0e;
+  --flipbook-font: inherit;
+}
+
+/* Fallback full screen (iPhone Safari has no Fullscreen API outside <video>) */
+html:has(.flipbook-fullscreen) {
+  overflow: hidden;
+}
+
+/* <main> is a stacking context below the sticky header: lift it while the viewer covers the page */
+main:has(.flipbook-fullscreen) {
+  z-index: 100;
+}
